@@ -24,6 +24,7 @@ while True:
 
     for key_constant, pressed in enumerate(pressed_keys):
         if pressed:
+            #for pygame 2.x.x, pygame.key.name(key_constant) output a strange character.
             key_name = pygame.key.name(key_constant)
             text_surface = font.render(key_name+" pressed", True, (0,0,0))
             screen.blit(text_surface, (8, y))
